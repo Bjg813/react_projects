@@ -1,6 +1,9 @@
 
+/* different ways to use grid-template-columns */
+
 .container {
     display: grid;
+    /* pixel sizes */
     grid-template-columns: 100px auto 100px;
     grid-template-rows: 50px 50px;
     grid-gap: 3px;
@@ -8,7 +11,16 @@
 
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* fractions */
+    grid-template-columns: 1fr 1fr 1fr;  
+    grid-template-rows: 50px 50px;
+    grid-gap: 3px;
+}
+
+.container {
+    display: grid;
+    /* using "repeat" in fractions with columns */
+    grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 50px 50px;
     grid-gap: 3px;
 }
@@ -16,7 +28,36 @@
 .container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 50px 50px;
+    /* using "repeat" in pixels with rows */
+    grid-template-rows: repeat(2, 50px);
     grid-gap: 3px;
 }
+
+.container {
+    display: grid;
+    /* using "repeat" with rows and columns  */
+    grid-template: repeat(2, 50px) / repeat(3, 1fr);
+    grid-gap: 3px;
+}
+
+/* create a full length header  */
+.header {
+    /* 1 = start at first column */
+    grid-column-start: 1;
+    /* 3 = end at third column */
+    grid-column-end: 3;
+}
+
+/* shorthand way of writing grid columns */
+.header {
+    grid-column: 1 / 3;
+}
+
+
+/* best way to write it! */
+/* dont have to worry about how many columns there are and helpful in the future if column size changes */
+.header {
+    grid-column: 1 / -1;
+}
+
 
