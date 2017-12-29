@@ -20,9 +20,17 @@
 		const location = $('#location').val();
 		$('#location').val('');
 
-		$.get(url + location + '&appid=' + apiKey).done(function(response) {
+		// $.get(url + location + '&appid=' + apiKey).done(function(response) {
+		// 	updateUISuccess(response);
+		// }).fail(function() {
+		// 	updateUIFailure();
+		// });
+
+		$.fetch(url + location + '&appid=' + apiKey).then(function(response) {
+			return(response.json());
+		}).then(function(response) {
 			updateUISuccess(response);
-		}).fail(function() {
+		}).catch(function() {
 			updateUIFailure();
 		});
 	});
