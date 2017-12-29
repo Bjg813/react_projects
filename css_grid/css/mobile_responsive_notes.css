@@ -1,3 +1,5 @@
+/* using 'autofit' and 'minmax()' can create mobile responsive design */
+
 .container {
     display: grid;
     grid-gap: 5px;

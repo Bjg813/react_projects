@@ -1,3 +1,4 @@
+/* Most useful way to layout a prototype  */
 .container {
     height: 100%;
     display: grid;
@@ -5,9 +6,10 @@
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: 40px auto 40px;
     grid-template-areas: 
-        "h h h h h h h h h h h h"
-        "m c c c c c c c c c c c"
+        "h h h h h h h h h h h ."
+        "m c c c c c c c c c c ."
         "f f f f f f f f f f f f"
+        /* can use '.' to make an empty column or row */
     
 }
 
