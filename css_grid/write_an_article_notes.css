@@ -11,11 +11,13 @@ article > * {
     min-width: 0;
 }
 
+/* make image full width */
 article > figure {
     grid-column: 1 / -1;
     margin: 20px 0;
 }
 
+/* make paragraph next to article in margin */
 article > .aside {
     grid-column: 3;
     color: #666;
