@@ -66,14 +66,16 @@
             getInitialState() {
                 return {
                     notes: [
-                      'Call Bob',
-                      'Email Sarah',
-                      'Eat lunch',
-                      'Finish proposal'
+                        {id: 0, note: 'Call Bob'},
+                        {id: 1, note: 'Email Sarah'},
+                        {id: 2, note: 'Eat Lunch'},
+                        {id: 3, note: 'Finish proposal'}
                     ]
                 }
             },
-
+            update(newText, id) {
+                
+            },
             render() {
                 return (<div className='board'>
                     {this.state.notes.map((note, i) => {
